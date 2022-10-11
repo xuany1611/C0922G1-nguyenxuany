@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Viết chương trình nhập một giá trị là độ 0C (Celsius) và chuyển nó sang độ 0F (Fahrenheit).
+        [Hướng dẫn: C/5 = (F-32)/9]</title>
+</head>
+<body>
+<h1>Bài 2: Độ C sang F</h1>
+<input type="text" id="dc">Độ C--
+<button type="button" onclick="giatri()">Đổi</button>
+<input type="text" id="df">Độ F
+</body>
+</html>
+<script>
+    function giatri() {
+        let doC =document.getElementById("dc").value
+        let doF = 9/5 * parseFloat(doC) + 32;
+        document.getElementById('df').value = doF;
+    }
+</script>

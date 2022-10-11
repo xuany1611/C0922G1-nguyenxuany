@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học.
+        Sau đó hiển thị điểm trung bình và tổng của những điểm này.</title>
+</head>
+<body>
+<h1>Điểm trung bình</h1>
+<input type="number" id="vatly" placeholder="nhập điểm vât lý"> <strong> điểm vật lý </strong><br>
+<input type="number" id="hoahoc" placeholder="nhập điểm hóa học"> <strong> điểm hóa học </strong><br>
+<input type="number" id="sinhhoc" placeholder="nhập điểm sinh học"> <strong> điểm sinh học </strong><br>
+<button onclick="trungbinh()">Điểm trung bình</button>
+<div id="dtb"></div>
+<div id="tong"></div>
+</body>
+</html>
+<script>
+    function trungbinh() {
+        let diemvatly = document.getElementById('vatly').value
+        let diemhoahoc = document.getElementById('hoahoc').value
+        let diemsinhhoc = document.getElementById('sinhhoc').value
+        let diemtrungbinh = (parseFloat(diemvatly) + parseFloat(diemhoahoc) + parseFloat(diemsinhhoc)) / 3;
+        document.getElementById('dtb').innerHTML = diemtrungbinh
+        let tong= (parseFloat(diemvatly) + parseFloat(diemhoahoc) + parseFloat(diemsinhhoc))
+        document.getElementById("tong").innerHTML=tong
+    }
+</script>

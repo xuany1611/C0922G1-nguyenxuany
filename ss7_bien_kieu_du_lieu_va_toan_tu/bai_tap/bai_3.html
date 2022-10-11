@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Viết chương trình tính diện tích hình tròn</title>
+</head>
+<body>
+<h1>Diện Tích Tròn</h1>
+<input type="text" id="abc"> Bán kính
+<br>
+<button type="button" onclick="dientichla()"> Diện Tích</button>
+<div id="dientich"></div>
+
+</body>
+</html>
+<script>
+    function dientichla() {
+        let bankinh = document.getElementById('abc').value;
+        let dientich = parseFloat(bankinh) * 3.14;
+        document.getElementById('dientich').innerHTML = ("diện tích là:") + dientich;
+    }
+</script>

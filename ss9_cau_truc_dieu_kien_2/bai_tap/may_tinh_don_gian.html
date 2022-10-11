@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính Đơn Giản</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td colspan="4"><input type="text" disabled  id="windown"></td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" id="soMot" value="1" onclick="mot()">1</button>
+        </td>
+        <td>
+            <button type="button" id="soHai" onclick="hai()">2</button>
+        </td>
+        <td>
+            <button type="button" id="soBa" onclick="ba()">3</button>
+        </td>
+        <td>
+            <button type="button" id="dauCong" onclick="cong()">+</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button type="button" id="soBon" onclick="bon()">4</button>
+        </td>
+        <td>
+            <button type="button" id="soNam" onclick="nam()">5</button>
+        </td>
+        <td>
+            <button type="button" id="soSau" onclick="sau()">6</button>
+        </td>
+        <td>
+            <button type="button" id="dauTru" onclick="tru()">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" id="soBay" onclick="bay()">7</button>
+        </td>
+        <td>
+            <button type="button" id="soTam" onclick="tam()">8</button>
+        </td>
+        <td>
+            <button type="button" id="soChin" onclick="chin()">9</button>
+        </td>
+        <td>
+            <button type="button" id="dauNhan" onclick="nhan()">x</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" id="chuC" onclick="C()">C</button>
+        </td>
+        <td>
+            <button type="button" id="soKhong" onclick="khong()">0</button>
+        </td>
+        <td>
+            <button type="button" id="dauBang" onclick="bang()">=</button>
+        </td>
+        <td>
+            <button type="button" id="dauChia" onclick="dauchia()">/</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    function mot() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + "1";
+    }
+
+    function hai() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '2';
+    }
+
+    function ba() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '3';
+    }
+
+    function cong() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '+';
+    }
+
+    function bon() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '4';
+    }
+
+    function nam() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '5';
+    }
+
+    function sau() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '6';
+    }
+
+    function tru() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '-';
+    }
+
+    function bay() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '7';
+    }
+
+    function tam() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '8';
+    }
+
+    function chin() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '9';
+    }
+
+    function nhan() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '*';
+    }
+
+    function C() {
+        document.getElementById('windown').value = 0 ;
+    }
+
+    function khong() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '0';
+    }
+
+    function bang() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = eval(result);
+    }
+
+    function dauchia() {
+        let result = document.getElementById('windown').value;
+        document.getElementById('windown').value = result + '/';
+    }
+</script>
