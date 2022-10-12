@@ -6,17 +6,24 @@
         kỳ</title>
 </head>
 <body>
+<input type="number" id="bkt" placeholder="nhập điểm bài kiểm tra ">
+<input type="number" id="btgk" placeholder="nhập điểm bài thi giữa kỳ">
+<input type="number" id="bkck" placeholder="nhập điểm bài thi cuối kỳ">
 
+<button type="button" onclick="clickHer()"> Điểm Trung Bình</button>
+<p></p>
+<p id="result"> điểm trung bình ở đây</p>
 </body>
 </html>
 <script>
-    let a = prompt("điểm thi giữa kì");
-    let b = prompt("điểm thi cuối kì");
-    if (a <= 5 && b <= 5) {
-        alert("học lực yếu");
-    } else if ((a >= 7 && a <= 8 && b >= 7 && b <= 8)) {
-        alert("học lực khá");
-    } else {
-        alert("học lực tốt");
+    function clickHer() {
+        let bkt1 = parseFloat(document.getElementById('bkt').value);
+        let btgk = parseFloat(document.getElementById('btgk').value);
+        let btck = parseFloat(document.getElementById('bkck').value);
+        let result ;
+        result = (bkt1 + btgk * 2 + btck * 3)/6
+        // console.log(result)
+        // document.getElementById('result').innerHTML = result
+        alert(result)
     }
 </script>
