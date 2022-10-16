@@ -9,15 +9,16 @@
 </body>
 </html>
 <script>
-    let dem=0;
-    let tong=0;
-    let i=7;
-    while (dem<30) {
+    let dem = 0;
+    let tong = 0;
+    let i = 0;
+    while (dem < 30) {
         if (i % 7 === 0) {
             tong = tong + i;
-            document.write(tong+"<br>")
+            document.write(tong + "<br>")
             dem++;
         }
+        i = i + 7
     }
-    document.write("Tổng= "+tong);
+    document.write("Tổng= " + tong);
 </script>

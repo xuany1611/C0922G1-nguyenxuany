@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết chương trình khởi tạo mảng số nguyên.
+        Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let trungBinh=0;
+    let max=0;
+    let soNguyen=[14,2,3,54,5,66,7,8,9,10];
+    for (let i=0;i<soNguyen.length;i++){
+        if (max<soNguyen[i]){
+            max=soNguyen[i];
+        }
+        trungBinh=trungBinh+soNguyen[i];
+
+    }
+    document.write("giá trị lớn nhất"+max+"<br>");
+    trungBinh=trungBinh/soNguyen.length
+    document.write("điểm trung bình"+trungBinh)
+</script>
