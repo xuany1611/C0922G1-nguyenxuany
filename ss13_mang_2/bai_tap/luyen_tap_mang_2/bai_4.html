@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: Viết một chương trình để đếm số từ trong một chuỗi</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let string = "hello c0922g1";
+
+    let arrString = [];
+    let count = 0;
+    for (let i = 0; i < string.length; i++)
+        arrString[i] = string.charAt(i);
+
+    for (let i = 0; i < arrString.length; i++) {
+        if (arrString[i] === " ")
+            count++;
+    }
+    document.write("số từ trong chuổi : " + (count + 1))
+</script>
