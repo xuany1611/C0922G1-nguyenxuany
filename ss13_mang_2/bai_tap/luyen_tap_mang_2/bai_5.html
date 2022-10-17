@@ -9,25 +9,22 @@
 </body>
 </html>
 <script>
-    let string1 = prompt("Vui long nhap chuoi 1: ");
-    let string2 = prompt("Vui long nhap chuoi 2: ");
-    let arr1 = [];
-    let arr2 = [];
-    for (let i = 0; i <= string1.length; i++) {
-        arr1[i] = string1.charAt(i);
-    }
-    for (let i = 0; i <= string2.length; i++) {
-        arr2[i] = string1.charAt(i);
-    }
+
     let count = 0;
-    if (arr1.length === arr2.length) {
-        for (let i = 0; i < arr1.length; i++) {
-            if (arr1[i] = arr2[i]) ;
-            count++;
+    let arr1 = prompt(" Nhập chuổi 1: ");
+    let arr2 = prompt(" Nhập chuổi 2: ");
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                count++;
+            }
         }
-        if (count === arr1.length)
-            alert("Hai chuoi da nhap la giong nhau");
-        else alert("Hai chuoi da nhap khac nhau");
-    } else
-        alert("Hai chuoi da nhap khac nhau");
+    }
+
+    if (count === arr1.length) {
+        alert("Giống nhau");
+    } else {
+        alert("Khác nhau");
+    }
+
 </script>
