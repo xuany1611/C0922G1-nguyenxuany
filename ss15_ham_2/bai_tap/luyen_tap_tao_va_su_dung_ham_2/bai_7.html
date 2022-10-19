@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let nhap1 = prompt("nhập tham số đầu tiên");
+    let nhap2 = prompt("nhập tham số thứ hai");
+    kiemTra(nhap1, nhap2);
+
+    function kiemTra(a, b) {
+        document.write(a + ",");
+        document.write(b + "<br>");
+        let c = a;
+        a = b;
+        b = c;
+        document.write(a + ",");
+        document.write(b);
+    }
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Với s1 = "aabcc" và s2 = "adcaa", thì kết quả commonCharacterCount(s1, s2) = 3.
+        2 xâu s1 và s2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'. </title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let count = 0;
+    let arr1 = prompt(" Nhập chuổi 1: ");
+    let arr2 = prompt(" Nhập chuổi 2: ");
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                count++;
+            }
+        }
+    }
+    document.write(" số ký tự chung là " + count  );
+
+
+    // let a1 = "aabcc";
+    // let b1 = "adcaa";
+    // let a=a1.split("")
+    // let b=b1.split("")
+    //
+    // function commonCharacterCount(a,b) {
+    //     let count = 0;
+    //
+    //     for (let i = 0; i < a.length; i++) {
+    //         for (let j = 0; j < b.length; j++) {
+    //             if (a[i] === b[j] ) {
+    //                a.splice(i,1);
+    //             b.splice(j,1);
+    //             count++ ;
+    //            console.log(a,b)
+    //
+    //             }
+    //         }
+    //     }
+    //     document.write(count)
+    // }
+    //
+    // commonCharacterCount(a,b);
+
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ,
+        kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không' .
+        Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. </title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let count = 0;
+    let kyTu = prompt(" nhập vào một ký tự");
+    let arr2 = ["1","2","3","a","1","6","1","a","b","c"];
+    kiemTra(kyTu,arr2);
+    function kiemTra( chuoi1,chuoi2) {
+        for (let i = 0; i < chuoi1 ; i++) {
+            for (let j = 0; j < chuoi2.length; j++) {
+                if (chuoi1[i] === chuoi2[j]) {
+                    count++;
+                }
+            }
+        }
+    }
+    if (count>0){
+        document.write(" số lần xuất hiện  " + count  );
+    }else {
+        document.write(" -1 ");
+    }
+</script>
