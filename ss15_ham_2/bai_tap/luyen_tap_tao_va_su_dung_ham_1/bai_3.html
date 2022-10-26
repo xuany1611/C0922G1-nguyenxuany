@@ -11,15 +11,16 @@
 </body>
 </html>
 <script>
-    function kiemTra() {
-        let nhap1 = +prompt("nhập vào tham số thứ nhất");
-        let nhap2 = +prompt("nhập vào tham số thứ 2");
-        if (nhap1 > nhap2) {
+    let nhap1 = +prompt("nhập vào tham số thứ nhất");
+    let nhap2 = +prompt("nhập vào tham số thứ 2");
+    function kiemTra(number1,number2) {
+
+        if (number1 > number2) {
             alert("thông báo ");
         } else {
-            alert("Tổng = "+ (nhap1+nhap2));
+            alert("Tổng = "+ (number1+number2));
         }
     }
-    kiemTra();
+    kiemTra(nhap1,nhap2);
 
 </script>

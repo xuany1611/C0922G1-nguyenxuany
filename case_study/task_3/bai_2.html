@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Cho 2 mảng A và B chứa số nguyên. Tìm ra một mảng đã được sắp xếp chứa các
+        phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A
+        Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện
+        Ví dụ: A=[7,2,5,3,5,3] và B=[7,2,5,4,6,3,5,3] thì kết quả missingValue(A, B) = [4, 6]</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr1 = [1, 2, 3, 4, 5, 6, 7];
+    let arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                arr1.splice(i, 1);
+                arr2.splice(j, 1);
+                j--;
+            }
+        }
+    }
+    document.write(" missingValue (arr1, arr2) = " + arr2);
+</script>

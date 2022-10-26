@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3 Nhập 1 mảng từ bàn phím với độ dài n
+        Hiện thị mảng sau khi thêm mới các phần tử
+        Kiểm tra mảng vừa nhập.
+        Nếu mảng mới nhập đã được sắp xếp ( tăng/giảm dần) thì hiện thị thông báo "OK", nếu không thoả mãn thì hiện thị
+        "NO"
+
+            bài 2;Viết chương trình nhập các phần tử cho mảng sao cho không có phần tử nào trùng nhau</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // let n = prompt(" nhập độ dài");
+    // let arr = [];
+    // let count = 0;
+    // let c = 0;
+    // for (let i = 0; i < n; i++) {
+    //     arr[i] = prompt(" nhập phần tử thứ " + i);
+    // }
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] > arr[i+1]) {
+    //         count++
+    //     } else
+    //         c++
+    // }
+    // if (count === arr.length) {
+    //     document.write("OK");
+    // } else if (c === arr.length) {
+    //     document.write("OK");
+    // } else {
+    //     document.write("NO");
+    // }
+    //
+    // document.write(arr);
+
+</script>
+<hr>
+<script>
+
+
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        arr[i] = +prompt(" Nhập vào phần tử " + i);
+    }
+    document.write("mảng ban đầu " + arr + "<br>");
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i] === arr[j] && j !== i) {
+                arr.splice(j, 1)
+                j--;
+            }
+        }
+    }
+    document.write("mảng sau khi xóa pt trùng: " + arr);
+
+</script>

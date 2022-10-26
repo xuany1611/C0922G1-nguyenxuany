@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="id" placeholder="Nhập ID">
+<input type="text" id="name" placeholder="Nhập Tên">
+<input type="text" id="email" placeholder="Nhập Email">
+<button type="button" onclick="addStudent()">Thêm</button>
+<p id="hienThi"></p>
+<table>
+
+
+</table>
+</body>
+<script>
+    let studenList = [];
+
+    class Student {
+        constructor(id, name, email) {
+            this.id = id;
+            this.name = name;
+            this.email = email;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setEmail(email) {
+            this.email = email;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+    }
+
+    let student1 = new Student(21, "Cường", "cuong@gmail.com");
+    let student2 = new Student(23, "Phúc", "phuc@gmail.com");
+    let student3 = new Student(19, "Minh", "minh@gmail.com");
+    studenList.push(student1, student2, student3);
+
+    hienThi(studenList);
+
+    function hienThi(liss) {
+        let data = '<table border="1" style="border-collapse: collapse">'
+        data += '<tr>\n' +
+            '        <th width="30">STT</th>\n' +
+            '        <th width="30">ID</th>\n' +
+            '        <th width="100">Tên</th>\n' +
+            '        <th width="100">Email</th>\n' +
+            '        <th>Sửa</th>\n' +
+            '        <th>Xóa</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < liss.length; i++) {
+            data += '<tr>\n' +
+                '        <td width="30">' + (i + 1) + '</td>\n' +
+                '        <td width="30">' + liss[i].getId() + '</td>\n' +
+                '        <td width="100">' + liss[i].getName() + '</td>\n' +
+                '        <td width="100">' + liss[i].getEmail() + '</td>\n' +
+                '        <td><input type="button" value="Sửa" onclick="editStudent(' + i + ')"></td>\n' +
+                '        <td><input type="button" value="Xóa" onclick="deleteStudent(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        data += '</table>';
+        document.getElementById("hienThi").innerHTML = data;
+    }
+
+    function editStudent(index) {
+        let chon = +prompt("Bạn Muốn Sửa Cái Nào Ạ\n" +
+            "1.ID\n" +
+            "2.Tên Học Sinh\n" +
+            "3.Email");
+        let nhap;
+        switch (chon) {
+            case 1:
+                nhap = prompt("Nhập ID");
+                if (nhap === "") {
+                    alert("Hãy Nhập Lại");
+                } else {
+                    studenList[index].setId(nhap);
+                    hienThi(studenList);
+                    break;
+                }
+            case 2:
+                nhap = prompt("Nhập Tên");
+                if (nhap === "") {
+                    alert("Hãy Nhập Lại");
+                } else {
+                    studenList[index].setName(nhap);
+                    hienThi(studenList);
+                    break;
+                }
+            case 3:
+                nhap = prompt("Nhập Email");
+                if (nhap === "") {
+                    alert("Hãy Nhập Lại");
+                } else {
+                    studenList[index].setEmail(nhap);
+                    hienThi(studenList);
+                    break;
+                }
+            default:
+                alert("Hãy chọn lại");
+        }
+    }
+
+    function deleteStudent(index) {
+        let chacChoan = confirm("Bạn Có Chắc Choắn Muốn Xóa Học Sinh " + studenList[index].getName() + " ?");
+        if (chacChoan) {
+            studenList.splice(index, 1);
+            hienThi(studenList);
+        }
+
+    }
+
+    function addStudent() {
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let student = new Student(id, name, email);
+
+        if (id === "" || name === "" || email === "") {
+            alert("Nhập lại");
+        } else {
+            studenList.push(student);
+            document.getElementById("id").value = ""
+            document.getElementById("name").value = ""
+            document.getElementById("email").value = ""
+            hienThi(studenList);
+
+        }
+    }
+</script>
+</html>
