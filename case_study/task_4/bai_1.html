@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bài 1: Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu
-        không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa. Ví dụ tRuong    TaN   HAI
+        không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa. Ví dụ tRuong TaN HAI
         => Truong Tan Hai.
         Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này để nhập
         xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.</title>
@@ -13,5 +13,25 @@
 </body>
 </html>
 <script>
+    let nhap1 = prompt(" nhập vào họ và tên");
+    let arr = nhap1.toLowerCase().split(" ");
+    kiemTra(arr);
 
+    function kiemTra(hoVaten) {
+        for (let i = 0; i < hoVaten.length; i++) {
+            if (hoVaten[i] !== "") {
+                hoVaten[i] = hoVaten[i][1].toUpperCase() + hoVaten[i].slice(1);
+            }
+        }
+        let max = 0;
+        let result = "";
+        for (let i = 0; i < hoVaten.length; i++) {
+            if (max < hoVaten[i].length) {
+                max = hoVaten[i].length;
+                result = hoVaten[i];
+            }
+        }
+        document.write(" sau khi sửa " + hoVaten.join(" ") + "<br>");
+        document.write("Từ dài nhất trong chuỗi là: " + result);
+    }
 </script>

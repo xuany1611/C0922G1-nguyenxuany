@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các
+        số nhập từ bàn phím </title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let nhap = +prompt(" nhập kích thước");
+    let arr1 = [];
+    for (let i = 0; i < nhap; i++) {
+        arr1[i] = +prompt(" nhập vào phần tử " + i);
+    }
+    document.write(arr1 + "<br>");
+    let nhap2 = +prompt(" nhập kích thước");
+
+    let arr2 = [];
+    for (let i = 0; i < nhap2; i++) {
+        arr2[i] = +prompt(" nhập vào phần tử " + i);
+    }
+    document.write(arr2 + "<br>");
+    let count = 0;
+    let arr3 = [arr1, arr2];
+    for (let i = 0; i < arr3.length; i++) {
+        for (let j = 0; j < arr3[i].length; j++) {
+            if (arr3[i][j] % 2 === 0) {
+                count = count + parseInt(arr3[i][j]);
+            }
+        }
+    }
+    document.write(" tổng là " + count);
+</script>
