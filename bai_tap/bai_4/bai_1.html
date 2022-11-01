@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tách đôi mảng số nguyên ban đầu sang hai mảng,
+        một nửa đầu sang mảng thứ nhất và nửa còn lại sang mảng thứ hai. Sau đó hiển thị hai mảng đó ra màn hình.
+    </title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let nhap = +prompt(" nhập độ dài mảng");
+    let arr = [];
+    let arr1 = [];
+    let arr2 = [];
+    for (let i = 0; i < nhap; i++) {
+        arr[i] = +prompt(" phập vào phần tử ");
+    }
+    document.write(arr + "<br>");
+
+    for (let i = 0; i < arr.length / 2; i++) {
+        arr1.push(arr[i]);
+    }
+    for (let j = arr.length / 2; j < arr.length; j++) {
+        arr2.push(arr[j]);
+    }
+    document.write(arr1 + "<br>");
+    document.write(arr2);
+
+
+</script>

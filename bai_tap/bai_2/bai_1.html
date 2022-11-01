@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình thực hiện các công việc:
+        Nhập liệu cho mảng một chiều có n phần tử nguyên (n > 0) từ bàn phím.
+        Kiểm tra mảng một chiều vừa nhập có đối xứng hay không?</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let c = true;
+    let nhap = +prompt(" nhập vào độ dài");
+    let arr = [];
+    for (let i = 0; i < nhap; i++) {
+        arr[i] = +prompt(" nhập phần tử " + i);
+    }
+    document.write(arr);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== arr[arr.length - 1 - i]) {
+            c = false;
+            break;
+        }
+    }
+    if (c === false) {
+        alert(" mảng vừa nhập không đối xứng");
+    }else {
+        alert(" mảng vừa nhập đối xứng");
+    }
+</script>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Tính trung bình cộng các số lẻ ở vị trí chẵn
+    let trungBinh
+    let dem = 0;
+    let mang1 = [];
+    let nhap = +prompt("nhâp độ dài");
+    let mang = [];
+
+    for (let i = 0; i < nhap; i++) {
+        mang[i] = +prompt(" nhập phần tử" + i);
+    }
+    document.write(mang + "<br>");
+
+    for (let i = 0; i < mang.length; i = i + 2) {
+        if (mang[i] !== 2) {
+            mang1.push(mang[i])
+            dem = dem + mang[i];
+        }
+    }
+
+    trungBinh = dem / mang1.length;
+    document.write(mang1 + "<br>");
+    document.write(trungBinh);
+
+</script>
+
+<script>
+    // tìm số lớn nhất trong mảng vừa nhâp
+    let nhap = +prompt("nhâp độ dài");
+    let mang = [];
+
+    for (let i = 0; i < nhap; i++) {
+        mang[i] = +prompt(" nhập phần tử" + i);
+    }
+
+    let max = mang[0];
+
+    document.write(mang + "<br>");
+    for (let i = 0; i < mang.length; i++) {
+        if (max < mang[i]) {
+            max = mang[i];
+        }
+    }
+
+    document.write(max)
+</script>
+
+<script>
+    //tìm vị trí các só nhỏ nhất trong mảng
+    let mang1=[];
+    let nhap = +prompt("nhâp độ dài");
+    let mang = [];
+
+    for (let i = 0; i < nhap; i++) {
+        mang[i] = +prompt(" nhập phần tử" + i);
+    }
+
+    document.write(mang+"<br>");
+
+    let min = mang[0];
+    for (let i = 0; i < mang.length; i++) {
+        if (min > mang[i]) {
+            min = mang[i];
+        }
+    }
+
+    document.write(min);
+</script>
+
+<script>
+    // các số chính phương có trong mảng
+    let count = 0;
+
+    let nhap = +prompt("nhâp độ dài");
+    let mang = [];
+
+    for (let i = 0; i < nhap; i++) {
+        mang[i] = +prompt(" nhập phần tử" + i);
+    }
+
+
+    document.write(mang + "<br>");
+    for (let i = 0; i < mang.length; i++) {
+        if (Math.sqrt(mang[i]) * Math.sqrt(mang[i]) === mang[i]) {
+            count++;
+        }
+    }
+    document.write(count);
+
+</script>
+
+<script>
+    // Hiện thị các số nguyên tố có trong mảng lên màn hình
+    let nhap = +prompt("nhâp độ dài");
+    let mang = [];
+
+    for (let i = 0; i < nhap; i++) {
+        mang[i] = +prompt(" nhập phần tử" + i);
+    }
+    kiemtraSNT(mang);
+
+    let mang1=[];
+    function kiemtraSNT(number) {
+        if (number < 2) {
+            return false;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    for (let i = 0; i < mang.length-1 ; i++) {
+        if (kiemtraSNT(mang[i])){
+            mang1.push(mang[i]);
+        }
+    }
+    document.write( mang1);
+
+</script>
+<script>
+    //Thay thế các phần tử âm có trong mảng bằng giá trị 0
+    let nhap = +prompt("nhâp độ dài");
+    let mang = [];
+
+    for (let i = 0; i < nhap; i++) {
+        mang[i] = +prompt(" nhập phần tử" + i);
+    }
+    for (let i = 0; i < mang.length; i++) {
+        if (mang[i] < 0) {
+            mang[i]=0;
+        }
+    }
+    document.write(mang);
+</script>
+<script>
+    // xóa phần tử âm trong mảng
+    let nhap = +prompt("nhâp độ dài");
+    let mang = [];
+
+    for (let i = 0; i < nhap; i++) {
+        mang[i] = +prompt(" nhập phần tử" + i);
+    }
+    document.write(mang+"<br>");
+
+    for (let i = 0; i <mang.length ; i++) {
+        if (mang[i]<0){
+            mang.splice(mang[i],1);
+        }
+    }
+    document.write(mang);
+</script>
+<script>
+    // sắp xếp các số thứ tự trong mảng
+    let nhap = +prompt("nhâp độ dài");
+    let mang = [];
+
+    for (let i = 0; i < nhap; i++) {
+        mang[i] = +prompt(" nhập phần tử" + i);
+    }
+    document.write(mang+"<br>");
+    for (let i = 0; i <mang.length ; i++) {
+        mang.sort();
+    }
+    document.write("mảng sau khi được sắp xếp"+mang);
+</script>
