@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 1 mảng từ bàn phím với độ dài n
+        Hiện thị mảng sau khi thêm mới các phần tử
+        Kiểm tra mảng vừa nhập. Nếu mảng mới nhập đã được sắp xếp ( tăng/giảm dần) thì hiện thị thông báo "OK",
+        nếu không thoả mãn thì hiện thị "NO"</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let nhap = prompt(" nhập dộ dài từ bàn phím");
+    let arr = [];
+    for (let i = 0; i < nhap; i++) {
+        arr[i] = prompt(" nhập phần tử " + i);
+    }
+    document.write(arr);
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i] < arr[i + 1]) {
+                alert(" mảng đã được sắp xếp tăng dần ");
+                break;
+            } else {
+                alert(" mảng đã được sắp xếp giảm dần ");
+                break;
+            }
+        }
+    }
+</script>
+<hr>
+<script>
+
+</script>
